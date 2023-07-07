@@ -19,3 +19,6 @@ spec:
         - name: DBPWD
           value: pw
         - name: DATABASE
+          value: employees
+        - name: APP_COLOR
+          value: blue
