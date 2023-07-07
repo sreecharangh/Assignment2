@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-container
+  namespace: app-employees
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: employees
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: employees
+        version: v2
+    spec:
+      containers:
+        - name: app-container
+          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr1:v0.2
+          ports:
+            - containerPort: 8081
+          env:
+            - name: DBHOST
+              value: mysql-service.sqldb
+            - name: DBPORT
+              value: "3306"
+            - name: DBUSER
+              value: root
+            - name: DBPWD
+              value: pw
+            - name: DATABASE
