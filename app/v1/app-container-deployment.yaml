@@ -4,7 +4,7 @@ metadata:
   name: app-container
   namespace: webapp
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: employees
@@ -30,3 +30,6 @@ spec:
             - name: DBPWD
               value: pw
             - name: DATABASE
+              value: employees
+            - name: APP_COLOR
+              value: blue 
