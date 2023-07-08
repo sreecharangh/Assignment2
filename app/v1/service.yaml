@@ -7,9 +7,9 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 8080
-      nodePort: 30008
+      nodePort: 30000
   selector:
     app: employees
     version: v1
