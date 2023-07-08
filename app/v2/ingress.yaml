@@ -12,12 +12,8 @@ spec:
             backend:
               service:
                 name: app-container-service
-                port:
-                  number: 30000
           - path: /v2
             pathType: Prefix
             backend:
               service:
                 name: app-container-service2
-                port:
-                  number: 30001
