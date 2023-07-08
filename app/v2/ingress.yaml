@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+spec:
+  rules:
+    - host: ec2-3-88-215-138.compute-1.amazonaws.com
+      http:
+        paths:
+          - path: /v1
+            pathType: Prefix
+            backend:
+              service:
+                name: app-container-service
+                port:
+                  number: 30000
+          - path: /v2
+            pathType: Prefix
+            backend:
+              service:
+                name: app-container-service2
+                port:
+                  number: 30001
