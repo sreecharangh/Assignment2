@@ -20,6 +20,9 @@ spec:
           image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr2:db-v0.1
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: pw
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: DBPWD  
           ports:
             - containerPort: 3306
