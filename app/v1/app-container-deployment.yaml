@@ -26,14 +26,20 @@ spec:
             - name: DBPORT
               value: "3306"
             - name: DBUSER
-              value: root
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: DBUSER  # Use the correct key here
             - name: DBPWD
-              value: pw
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: DBPWD  # Use the correct key here
             - name: DATABASE
               value: employees
             - name: APP_COLOR
               value: blue
-            - name: BACKGROUND_IMAGE_URL  
+            - name: BACKGROUND_IMAGE_URL
               valueFrom:
                 configMapKeyRef:
                   name: app-config
