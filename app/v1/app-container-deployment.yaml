@@ -4,7 +4,7 @@ metadata:
   name: app-container
   namespace: webapp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: employees
@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
         - name: app-container
-          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr1:v3
+          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr1:v5
           ports:
-            - containerPort: 8080
+            - containerPort: 81
           env:
             - name: DBHOST
               value: mysql-service.sqldb
