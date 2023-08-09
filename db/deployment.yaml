@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mysql-container
-          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr2:db-v0.1
+          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr2:v3
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
