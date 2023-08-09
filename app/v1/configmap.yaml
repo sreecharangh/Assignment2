@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  BACKGROUND_IMAGE_URL: https://s3.....
+  BACKGROUND_IMAGE_URL: https://s3...
+  YOUR_NAME: SENECA TEAM
