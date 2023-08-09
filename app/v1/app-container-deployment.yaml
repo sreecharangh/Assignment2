@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app-container
-          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr1:v0.1
+          image: 708519571347.dkr.ecr.us-east-1.amazonaws.com/ecr1:v3
           ports:
             - containerPort: 8080
           env:
